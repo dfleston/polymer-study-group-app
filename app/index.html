@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/styles/main.css">
     <!-- endbuild-->
     <!-- build:js /bower_components/webcomponentsjs/webcomponents.min.js -->
-    <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+    <script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
     <!-- endbuild -->
     <!-- will be replaced with /elements/elements.vulcanized.html -->
     <link rel="import" href="/elements/elements.html">
@@ -20,16 +20,53 @@
 
 <body unresolved fullbleed layout vertical>
     <template is="auto-binding" id="app">
-        <core-image class="splash-image" src="http://lorempixel.com/1024/768/abstract" sizing="cover" preload fade layout self-center ></core-image>
-        <div class="social-buttons" layout horizontal around-justified>
-            <paper-fab icon="social-post:gplus"></paper-fab>
-            <paper-fab icon="social-post:twitter"></paper-fab>
-            <paper-fab icon="social-post:facebook"></paper-fab>
+         
+        <core-image class="splash-image" src="http://lorempixel.com/1024/768/people" sizing="cover" preload fade layout self-center ></core-image>
+        <!-- <core-image class="splash-image" src="./img/oshey.jpg" sizing="cover" preload fade layout self-center ></core-image> -->
+        <div class="hero-unit">
+        <div horizontal center-justified layout style="padding:1%">Sign up with your social profiles</div>
+        <div id="socials" layout horizontal around-justified>
+            <paper-fab icon="social-post:gplus" id="socials"></paper-fab>
+            <paper-fab icon="social-post:twitter" style="background:#5677fc;"></paper-fab>
+            <paper-fab icon="social-post:facebook" style="background:#3b5998;"></paper-fab>
         </div>
+        </div>
+
+        <div flex><a style="padding:5px"  horizontal center-justified layout href="/../bower_components" >Create a "___" account</a></div>
+
+    
     </template>
     <!-- build:js /scripts/app.js -->
-    <script src="/scripts/app.js"></script>
+    <script src="/scripts/app.js">
+
+ 
+    
+    </script>
     <!-- endbuild-->
+    
+    <script>
+
+    
+// animations
+
+    var animation = new CoreAnimation();
+        animation.duration = 1000;
+        animation.iterations = Infinity;
+        animation.direction = alternate;
+        animation.keyframes = [
+            {opacity: 1},
+            {opacity: 0.3}
+        ];
+        animation.target = document.getElementById('socials');
+    animation.play();  
+
+    
+    
+    </script>
+    
+
+    
+
 </body>
 
 </html>

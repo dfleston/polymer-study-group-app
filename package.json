@@ -1,7 +1,11 @@
 {
   "name": "polymer-study-group-app",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "grunt-browser-sync": "^2.1.1",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-replace": "^0.8.0"
+  },
   "devDependencies": {
     "web-component-tester": "^2.2.3",
     "connect-livereload": "^0.5.2",
